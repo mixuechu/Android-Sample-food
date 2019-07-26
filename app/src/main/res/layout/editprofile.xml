@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical"
+                android:padding="7dp"
+                android:textColor="@color/black"
+                android:id="@+id/title"
+                android:drawableLeft="@drawable/back_arrow_black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:text="EDIT PROFILE"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/graydark"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/rlphoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.app.pocketeat.CircularImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="4dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/placeholder"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="2dp"/>
+                <ImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_profile"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="-30dp"
+                    android:src="@drawable/edit_img"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="KAVERI PATEL"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinput3"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:focusableInTouchMode="true"
+                app:boxBackgroundColor="@color/text_gray"
+                android:textColorHint="@color/text_gray"
+                style="@style/Widget.Design.TextInputLayout1"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edyusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_gray"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:hint="User name"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinput1"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                app:boxBackgroundColor="@color/text_gray"
+                android:textColorHint="@color/text_gray"
+                style="@style/Widget.Design.TextInputLayout1"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_gray"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/black"
+                    android:inputType="phone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:hint="Canadian phone number(+1)"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+                <TextView
+                    android:id="@+id/sendpincode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="true"
+                    android:inputType="number"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:text="SEND OTP"/>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinput2"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:focusableInTouchMode="true"
+                app:boxBackgroundColor="@color/text_gray"
+                android:textColorHint="@color/text_gray"
+                style="@style/Widget.Design.TextInputLayout1"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtpincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_gray"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:hint="Enter OTP"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="30dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:shadowColor="@color/black"
+                app:cardCornerRadius="6dp"
+                android:shadowRadius="50">
+            <Button
+                android:id="@+id/btncontinue"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Confirm"
+                android:textAllCaps="true"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_press_effect_new"/>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</layout>

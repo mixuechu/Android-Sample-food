@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llmain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:maxHeight="250dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+
+        android:shadowColor="@color/black"
+        app:cardCornerRadius="5dp"
+        android:shadowRadius="100">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="150dp"
+            android:maxHeight="250dp"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/ic_tag"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginTop="-6dp"
+            android:paddingLeft="7dp"
+            android:gravity="center_vertical|left"
+            android:text="25%"/>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mainbg"
+        >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_arrow_white"
+                android:layout_marginLeft="10dp"
+                />
+            <RelativeLayout
+                android:id="@+id/rlphoto"
+                android:layout_width="wrap_content"
+                android:gravity="center|center_vertical"
+                android:layout_marginTop="-30dp"
+                android:layout_gravity="center|center_vertical"
+                android:layout_height="wrap_content">
+
+                <com.app.pocketeat.CircularImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                   android:layout_marginTop="30dp"
+                    android:src="@drawable/signup"
+
+                    app:civ_border="true"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="2dp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/lbl_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:textColor="#69BEF3"
+                    android:paddingLeft="-200dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textAllCaps="true"
+                    android:text="SIGN IN"/>
+                <TextView
+                    android:id="@+id/lbl_signin"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:padding="20dp"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
+                    android:text="SIGN UP"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinput3"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:focusableInTouchMode="true"
+                    app:boxBackgroundColor="@color/white"
+                    android:textColorHint="@color/offwhite"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edyusername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/white"
+
+                        android:textColor="@color/white"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:hint="User name"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinput0"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    android:textColorHint="@color/offwhite"
+                    android:layout_height="wrap_content">
+                    <com.app.pocketeat.CustomAutoCompleteTextView
+                        android:id="@+id/edtCurrentCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/offwhite"
+                        android:hint="Location" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinput1"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    android:textColorHint="@color/offwhite"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edt_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/white"
+                        android:inputType="phone"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:hint="Canadian phone number(+1)"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:gravity="right">
+                    <TextView
+                        android:id="@+id/sendpincode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textAllCaps="true"
+                        android:inputType="number"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/rounded"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:text="SEND PIN CODE"/>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinput2"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:focusableInTouchMode="true"
+                    app:boxBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    android:textColorHint="@color/offwhite"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edtpincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:hint="Pin code"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <Button
+                        android:id="@+id/btncontinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="Sign Up"
+                        android:enabled="false"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/button_press_effect"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+</layout>
